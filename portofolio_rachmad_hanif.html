@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8fafc" id="themeColorMeta" />
+  <title>Rachmad Hanif Hanafi G. — Portofolio</title>
+  <meta name="description" content="Portofolio Rachmad Hanif Hanafi Ghozali, lulusan S1 Sistem Informasi UTY." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-label="Memuat Portofolio" role="status">
+    <div class="preloader-content">
+      <div class="preloader-spinner"></div>
+      <span class="preloader-text">Hanafi Ghozali</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#home" class="navbar-brand">Hanafi Ghozali</a>
+    <ul class="navbar-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Ganti Tema" title="Ganti Mode Terang / Gelap">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Drawer & Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-menu-header">
+        <a href="#home" class="navbar-brand mobile-nav-link"
+          style="padding: 0; border: none; background: transparent;">Hanafi Ghozali</a>
+        <button class="theme-toggle" id="mobileThemeToggle" aria-label="Ganti Tema" title="Ganti Mode Terang / Gelap">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/6282252288526" target="_blank" class="btn btn-primary"
+        style="width: 100%; justify-content: center;">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+      </a>
+    </div>
+  </aside>
+
+  <!-- Dot Navigation -->
+  <div class="dot-nav">
+    <a href="#home" class="active" data-section="home" title="Home"></a>
+    <a href="#about" data-section="about" title="About"></a>
+    <a href="#projects" data-section="projects" title="Projects"></a>
+    <a href="#experience" data-section="experience" title="Experience"></a>
+    <a href="#contact" data-section="contact" title="Contact"></a>
+  </div>
+
+  <!-- ===== HOME ===== -->
+  <section class="section" id="home">
+    <div class="section-inner">
+      <div class="hero-grid">
+        <div class="fade-up">
+          <div class="hero-label">Introduction</div>
+          <h1 class="hero-title">
+            Rachmad Hanif<br>Hanafi Ghozali
+          </h1>
+          <p class="hero-sub">
+            Lulusan S1 Sistem Informasi dari Universitas Teknologi Yogyakarta.
+            Saya senang merancang database, membangun web sederhana, dan punya pengalaman
+            nyata di luar kampus — dari memimpin kepanitiaan sampai jualan online.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-regular fa-paper-plane"></i> Hubungi Saya
+            </a>
+            <a href="https://wa.me/6282252288526" target="_blank" class="btn btn-outline">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <button onclick="salinKontak('hanifhanati700@gmail.com', 'Email')" class="btn btn-outline">
+              <i class="fa-regular fa-copy"></i> Salin Email
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up">
+          <div class="hero-avatar-glow"></div>
+          <div class="hero-avatar-card">
+            <img src="porto.jpeg" alt="Rachmad Hanif Hanafi Ghozali" class="hero-avatar-img"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80';">
+            <div class="hero-badge-floating">
+              <span class="status-dot"></span>
+              <span>Available for Hire · 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label">Tentang Saya</div>
+        <h2 class="section-title">Sedikit tentang perjalanan<br>saya selama kuliah.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="fade-up">
+          <div class="about-text">
+            <p>
+              Selama kuliah, saya banyak belajar soal bagaimana proses bisnis diterjemahkan ke dalam
+              sistem digital — mulai dari bikin diagram alur, desain tabel database, sampai membangun
+              aplikasi web sederhana yang bisa dipakai. Untuk skripsi, saya membuat sistem informasi
+              perpustakaan berbasis web.
+            </p>
+            <p>
+              Di luar kuliah, saya pernah dipercaya jadi Ketua Pelaksana Smart Competition 2024,
+              yang mengajarkan saya banyak soal koordinasi tim. Saya juga pernah jualan online
+              (aplikasi premium, HP, dan sego cokot) serta kerja jaga rental PlayStation — dua hal
+              yang melatih ketelitian dalam pencatatan dan kesabaran melayani pelanggan.
+            </p>
+          </div>
+
+          <div class="skills-group">
+            <h4>Technical Skills</h4>
+            <div class="skills-list">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">HTML / CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">ERD & Normalisasi</span>
+              <span class="skill-tag">MS Excel</span>
+              <span class="skill-tag">MS Word</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h4>Soft Skills</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Koordinasi Tim</span>
+              <span class="skill-tag">Pelayanan Pelanggan</span>
+              <span class="skill-tag">Pembukuan Sederhana</span>
+              <span class="skill-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-value">3,31</div>
+              <div class="stat-label">IPK / 4.00</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">500</div>
+              <div class="stat-label">Skor EPT English</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">'26</div>
+              <div class="stat-label">Tahun Lulus</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="stat-item">
+              <div
+                style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">
+                Pendidikan</div>
+              <div
+                style="font-size: 1rem; font-weight: 600; color: var(--text-bright); font-family: 'Jost', sans-serif;">
+                S1 Sistem Informasi</div>
+              <div style="font-size: 0.82rem; color: var(--text); margin-top: 4px;">Universitas Teknologi Yogyakarta
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-dim); margin-top: 2px;">Periode 2022 – 2026</div>
+              <div style="font-size: 0.78rem; color: var(--text); margin-top: 12px; line-height: 1.6;">
+                Mata kuliah relevan: Analisis & Perancangan SI, Manajemen Basis Data,
+                Rekayasa Perangkat Lunak, Pemrograman Web.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label">Proyek</div>
+        <h2 class="section-title">Beberapa hal yang<br>pernah saya kerjakan.</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Perpustakaan -->
+        <div class="project-card fade-up">
+          <div class="project-img-wrapper">
+            <img src="Perpustakaan.png" alt="Sistem Informasi Perpustakaan Web" class="project-img">
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-badge">Skripsi - 2026</span>
+            <h3>Sistem Informasi Perpustakaan Web</h3>
+            <p>
+              Mengembangkan sistem berbasis Laravel dan MySQL untuk menggantikan pencatatan manual perpustakaan. Sistem
+              mencakup manajemen buku, anggota, transaksi peminjaman/pengembalian, perhitungan denda, dan laporan.
+              Melakukan pengujian menggunakan metode Black Box Testing.
+            </p>
+            <div class="project-tags">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>MySQL</span>
+              <span>Blackbox Testing</span>
+              <span>Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2:Website Sistem informasi POS -->
+        <div class="project-card fade-up">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&auto=format&fit=crop&q=80"
+              alt="Website Sistem informasi POS" class="project-img">
+            <div class="project-img-overlay"></div>
+          </div>
+
+          <div class="project-content">
+            <span class="project-badge">Projek Mandiri - 2026</span>
+            <h3>Website Sistem informasi POS</h3>
+            <p>
+              Website Sistem Informasi Penjualan (POS) dibuat sebagai sarana untuk mempermudah
+              pencatatan transaksi pada UMKM warung Kopi "Buk Win". Memiliki fitur kalkulasi transaksi dan pencatatan
+              penjualan yang efisien.
+            </p>
+            <div class="project-tags">
+              <span>MySQL</span>
+              <span>Laravel</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: POS Warung Kopi -->
+        <div class="project-card fade-up">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&auto=format&fit=crop&q=80"
+              alt="Website Sistem Informasi POS Buk Win" class="project-img">
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-badge">Proyek Pribadi · 2026</span>
+            <h3>Website Sistem Informasi POS</h3>
+            <p>
+              Website Sistem Informasi Penjualan (POS) dibuat sebagai sarana untuk mempermudah
+              pencatatan transaksi pada UMKM warung Kopi "Buk Win". Memiliki fitur kalkulasi transaksi dan pencatatan
+              penjualan yang efisien.
+            </p>
+            <div class="project-tags">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+              <span>POS System</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: WA BOT pencatatan keuangan-->
+        <div class="project-card fade-up">
+          <div class="project-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+              alt="WA BOT pencatatan keuangan" class="project-img">
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-badge">Projek Mandiri · 2026</span>
+            <h3>WA BOT pencatatan keuangan</h3>
+            <p>
+              Mencatat pengeluaran dan pemasukan melalui chat WhatsApp, tanpa memerlukan aplikasi tambahan.
+            </p>
+            <div class="project-tags">
+              <span>Json</span>
+              <span>JavaScript</span>
+              <span>WhatsApp API</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label">Pengalaman</div>
+        <h2 class="section-title">Pengalaman kerja, organisasi,<br>dan wirausaha.</h2>
+      </div>
+
+      <div class="timeline fade-up">
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h3>Smart Competition 2024</h3>
+            <div class="role">Ketua Pelaksana · Organisasi Kampus</div>
+            <p>
+              Koordinasi panitia dari beberapa divisi (acara, logistik, publikasi, pendaftaran, konsumsi).
+              Menyusun jadwal, memimpin rapat evaluasi, dan memastikan acara berjalan sesuai rencana.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2022-2026</div>
+          <div class="timeline-content">
+            <h3>Wirausaha Mandiri</h3>
+            <div class="role">Penjualan Aplikasi Premium, HP, & Sego Cokot</div>
+            <p>
+              Mengurus sendiri dari cari supplier, proses pesanan, layani pelanggan,
+              sampai catat pemasukan-pengeluaran di spreadsheet.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h3>Penjaga Rental PlayStation</h3>
+            <div class="role">Operasional & Pelayanan</div>
+            <p>
+              Catat durasi sewa dan hitung tagihan pelanggan, terima pembayaran,
+              rawat konsol dan stik controller, laporkan hasil kas setiap pergantian shift.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h3>Seminar Keamanan Siber & Workshop Web Dev</h3>
+            <div class="role">Panitia Pelaksana · Kampus</div>
+            <p>
+              Bantu kelancaran teknis acara, alur masuk peserta, dukungan logistik narasumber,
+              dan siapkan modul praktikum peserta workshop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="fade-up">
+        <div class="section-label">Kontak</div>
+        <h2 class="section-title">Mari terhubung.</h2>
+        <p class="section-desc">
+          Saya terbuka untuk undangan wawancara, lowongan entry-level, atau sekadar ngobrol soal kolaborasi.
+        </p>
+      </div>
+
+      <div class="contact-grid fade-up">
+        <div class="contact-links">
+          <a href="https://wa.me/6282252288526" target="_blank" class="contact-link">
+            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+            <div>
+              <span class="label">WhatsApp</span>
+              <span class="value">+62 822-5228-8526</span>
+            </div>
+          </a>
+          <a href="mailto:hanifhanati700@gmail.com" class="contact-link">
+            <i class="fa-regular fa-envelope" style="color: var(--accent);"></i>
+            <div>
+              <span class="label">Email</span>
+              <span class="value">hanifhanati700@gmail.com</span>
+            </div>
+          </a>
+          <div class="contact-link">
+            <i class="fa-solid fa-map-pin" style="color: var(--text-dim);"></i>
+            <div>
+              <span class="label">Lokasi</span>
+              <span class="value">Sleman, D.I. Yogyakarta</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="waForm" class="contact-form">
+            <div>
+              <label>Nama / Perusahaan</label>
+              <input type="text" id="waName" required placeholder="Contoh: HRD PT Maju Bersama">
+            </div>
+            <div>
+              <label>Tujuan</label>
+              <select id="waTopic">
+                <option value="Undangan Wawancara Kerja">Undangan Wawancara / Peluang Kerja</option>
+                <option value="Tawaran Proyek">Tawaran Proyek</option>
+                <option value="Diskusi & Kolaborasi">Diskusi / Lainnya</option>
+              </select>
+            </div>
+            <div>
+              <label>Pesan</label>
+              <textarea id="waMessage" rows="3" required
+                placeholder="Halo Hanif, kami tertarik dengan profil Anda..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"
+              style="justify-content: center; width: 100%; margin-top: 4px;">
+              <i class="fa-brands fa-whatsapp"></i> Kirim di WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2026 Rachmad Hanif Hanafi Ghozali
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-check" style="margin-right: 6px;"></i>
+    <span id="toastText">Berhasil disalin!</span>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
