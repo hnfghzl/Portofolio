@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a192f" id="themeColorMeta" />
+  <meta name="theme-color" content="#f8fafc" id="themeColorMeta" />
   <title>Rachmad Hanif Hanafi Ghozali · S1 Sistem Informasi</title>
   <meta name="description"
     content="Portofolio Rachmad Hanif Hanafi Ghozali, lulusan S1 Sistem Informasi UTY 2026. Fokus pada analisis sistem, database MySQL, dan pengembangan web fungsional." />
 
-  <!-- Google Fonts: Inter & JetBrains Mono (Brittany Chiang aesthetic) -->
+  <!-- Google Fonts: Inter & JetBrains Mono (Clean, Modern Engineering Aesthetic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="theme-dark" id="top">
+<body class="theme-light" id="top">
 
   <!-- Interactive Spotlight Effect (Brittany Chiang signature) -->
   <div class="spotlight-overlay" id="spotlightOverlay" aria-hidden="true"></div>
@@ -35,15 +35,26 @@
 
   <!-- Mobile Top Bar (< 1024px) -->
   <header class="mobile-header">
-    <a href="#top" class="mobile-brand">RH</a>
-    <div class="mobile-actions">
-      <button class="theme-toggle-btn" id="mobileThemeToggle" aria-label="Ganti Mode Gelap / Terang" title="Ganti Tema">
-        <i class="fa-regular fa-sun"></i>
-      </button>
-      <a href="https://wa.me/6282252288526" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn">
-        <i class="fa-brands fa-whatsapp"></i> Kontak
+    <div class="mobile-header-main">
+      <a href="#top" class="mobile-brand">
+        <img src="porto.jpeg" alt="Foto Hanif" class="mobile-brand-avatar" onerror="this.style.display='none'" />
+        <div class="mobile-brand-text">
+          <span class="mobile-brand-name">Rachmad Hanif</span>
+          <span class="mobile-brand-role">S1 Sistem Informasi</span>
+        </div>
+      </a>
+      <a href="https://wa.me/6282252288526" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn" aria-label="Chat WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i> Chat WA
       </a>
     </div>
+    <!-- Mobile Horizontal Quick Nav Pills -->
+    <nav class="mobile-quick-nav" aria-label="Navigasi Cepat Mobile">
+      <a href="#about" class="mobile-nav-pill active" data-section="about">Tentang</a>
+      <a href="#experience" class="mobile-nav-pill" data-section="experience">Pengalaman</a>
+      <a href="#projects" class="mobile-nav-pill" data-section="projects">Proyek</a>
+      <a href="#skills-edu" class="mobile-nav-pill" data-section="skills-edu">Keahlian</a>
+      <a href="#contact" class="mobile-nav-pill" data-section="contact">Kontak</a>
+    </nav>
   </header>
 
   <!-- Main Container: Brittany Chiang Split-Screen 2-Column Layout -->
@@ -60,12 +71,10 @@
             <span class="status-pulse" title="Tersedia untuk peluang kerja 2026"></span>
           </div>
           <div class="hero-intro">
-
-            </span>
             <h1 class="author-name">
               <a href="#top">Rachmad Hanif Hanafi Ghozali</a>
             </h1>
-            <h2 class="author-title">S1 Sistem Informasi & Web Developer</h2>
+            <h2 class="author-title">S1 Sistem Informasi &amp; Web Developer</h2>
             <p class="author-tagline">
               Lulusan S1 Sistem Informasi UTY. Berfokus pada perancangan basis data, integrasi proses bisnis, dan web
               development yang fungsional serta mudah digunakan.
@@ -109,10 +118,9 @@
         </nav>
       </div>
 
-      <!-- Bottom Sidebar: Socials, Salin Email & Theme Switcher -->
+      <!-- Bottom Sidebar: Socials, Salin Email -->
       <div class="sidebar-bottom">
         <ul class="social-links" aria-label="Tautan Kontak & Media Sosial">
-          <!-- Ganti 'username-anda' dengan username akun Anda -->
           <li>
             <a href="https://www.linkedin.com/in/rachmad-hanif-hanafi-ghozali-35021b300/" target="_blank"
               rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
@@ -149,14 +157,6 @@
             </button>
           </li>
         </ul>
-
-        <div class="sidebar-controls">
-          <button class="theme-toggle-btn" id="themeToggle" aria-label="Ganti Tema Mode Gelap / Terang"
-            title="Ganti Tema">
-            <i class="fa-regular fa-sun" id="themeToggleIcon"></i>
-            <span class="theme-label" id="themeToggleLabel">Light</span>
-          </button>
-        </div>
       </div>
     </header>
 

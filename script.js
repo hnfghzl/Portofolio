@@ -50,56 +50,23 @@
   );
 })();
 
-// ===== 3. Theme Toggle (Dark Navy / Clean Slate Light) =====
-const themeToggle = document.getElementById('themeToggle');
-const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-const themeToggleIcon = document.getElementById('themeToggleIcon');
-const themeToggleLabel = document.getElementById('themeToggleLabel');
-const themeColorMeta = document.getElementById('themeColorMeta');
+// Ensure permanent clean light mode (clear old localStorage if any)
+try {
+  localStorage.removeItem('rh-portfolio-theme');
+} catch (e) {}
+document.body.classList.remove('theme-dark');
+document.body.classList.add('theme-light');
 
-function applyTheme(theme) {
-  if (theme === 'light') {
-    document.body.classList.remove('theme-dark');
-    document.body.classList.add('theme-light');
-    localStorage.setItem('rh-portfolio-theme', 'light');
-
-    if (themeToggleIcon) themeToggleIcon.className = 'fa-regular fa-moon';
-    if (themeToggleLabel) themeToggleLabel.textContent = 'Dark Mode';
-    if (themeColorMeta) themeColorMeta.setAttribute('content', '#f8fafc');
-  } else {
-    document.body.classList.remove('theme-light');
-    document.body.classList.add('theme-dark');
-    localStorage.setItem('rh-portfolio-theme', 'dark');
-
-    if (themeToggleIcon) themeToggleIcon.className = 'fa-regular fa-sun';
-    if (themeToggleLabel) themeToggleLabel.textContent = 'Light Mode';
-    if (themeColorMeta) themeColorMeta.setAttribute('content', '#0a192f');
-  }
-}
-
-// Read saved preference or system preference (Default to Brittany Chiang Dark)
-const savedTheme = localStorage.getItem('rh-portfolio-theme') || 'dark';
-applyTheme(savedTheme);
-
-function toggleTheme() {
-  const isLight = document.body.classList.contains('theme-light');
-  const nextTheme = isLight ? 'dark' : 'light';
-  applyTheme(nextTheme);
-  showToast(nextTheme === 'dark' ? 'Mode Gelap diaktifkan' : 'Mode Terang diaktifkan');
-}
-
-if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
-
-// ===== 4. ScrollSpy & Dynamic Nav Indicator (Brittany Chiang Lines) =====
+// ===== 3. ScrollSpy & Dynamic Nav Indicator (Desktop Lines & Mobile Quick Pills) =====
 (function initScrollSpy() {
   const sections = document.querySelectorAll('.content-section');
   const navItems = document.querySelectorAll('.nav-item');
+  const mobileNavPills = document.querySelectorAll('.mobile-nav-pill');
 
-  if (!sections.length || !navItems.length) return;
+  if (!sections.length) return;
 
   function updateActiveNav() {
-    const scrollPosition = window.scrollY + 200;
+    const scrollPosition = window.scrollY + 180;
 
     let currentSectionId = '';
     sections.forEach((section) => {
@@ -121,11 +88,22 @@ if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
     }
 
     if (currentSectionId) {
+      // Desktop Nav Indicator
       navItems.forEach((link) => {
         if (link.getAttribute('data-section') === currentSectionId) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
+        }
+      });
+
+      // Mobile Quick Nav Pills
+      mobileNavPills.forEach((pill) => {
+        if (pill.getAttribute('data-section') === currentSectionId) {
+          pill.classList.add('active');
+          pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } else {
+          pill.classList.remove('active');
         }
       });
     }
